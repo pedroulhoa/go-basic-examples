@@ -16,7 +16,14 @@ func swap(textA string, textB string) (string, string) {
 // shortened define type
 // func add(x, y int)
 
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+
 func main() {
 	fmt.Println(add(40, 40))
 	fmt.Println(swap("Hello", "World"))
+	fmt.Println(split(10))
 }
