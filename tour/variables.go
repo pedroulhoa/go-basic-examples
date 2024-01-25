@@ -38,4 +38,11 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
 	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
+
+	// Zero values
+	var intzero int
+	var floatzero float64
+	var boolzero bool
+	var stringzero string
+	fmt.Printf("zero values: %v %v %v %q\n", intzero, floatzero, boolzero, stringzero)
 }
