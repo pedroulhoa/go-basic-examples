@@ -69,4 +69,15 @@ func main() {
 	fmt.Printf("testint is of type %T\n", testint)
 	fmt.Printf("testfloat is of type %T\n", testfloat)
 	fmt.Printf("testcomplex is of type %T\n", testcomplex)
+
+	// Constants
+	const Pi = 3.14
+
+	const World = "世界"
+	fmt.Println("Hello", World)
+	fmt.Println("Happy", Pi, "Day")
+
+	const Truth = true
+	fmt.Println("Go rules?", Truth)
+	fmt.Printf("Constants: %v\n", Pi)
 }
