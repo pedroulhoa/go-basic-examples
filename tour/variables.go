@@ -45,4 +45,16 @@ func main() {
 	var boolzero bool
 	var stringzero string
 	fmt.Printf("zero values: %v %v %v %q\n", intzero, floatzero, boolzero, stringzero)
+
+	// type conversions
+	var typeconversion int = 42
+	var newfloat float64 = float64(typeconversion)
+	var newuint uint = uint(newfloat)
+
+	// simplified
+	// i := 42
+	// f := float64(i)
+	// u := uint(f)
+
+	fmt.Printf("type conversions: %v %v\n", newfloat, newuint)
 }
