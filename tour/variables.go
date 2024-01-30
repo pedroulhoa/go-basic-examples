@@ -46,7 +46,7 @@ func main() {
 	var stringzero string
 	fmt.Printf("zero values: %v %v %v %q\n", intzero, floatzero, boolzero, stringzero)
 
-	// type conversions
+	// Type conversions
 	var typeconversion int = 42
 	var newfloat float64 = float64(typeconversion)
 	var newuint uint = uint(newfloat)
@@ -57,4 +57,16 @@ func main() {
 	// u := uint(f)
 
 	fmt.Printf("type conversions: %v %v\n", newfloat, newuint)
+
+	// Type inference
+	var inference int
+	testinference := inference // is int
+	fmt.Printf("testinference is of type %T\n", testinference)
+
+	testint := 42               // int
+	testfloat := 3.142          // float64
+	testcomplex := 0.867 + 0.5i // complex128
+	fmt.Printf("testint is of type %T\n", testint)
+	fmt.Printf("testfloat is of type %T\n", testfloat)
+	fmt.Printf("testcomplex is of type %T\n", testcomplex)
 }
