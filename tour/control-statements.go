@@ -11,4 +11,12 @@ func main() {
 	}
 
 	fmt.Println(sum)
+
+	// for continued
+	sumContinued := 1
+	for sumContinued < 1000 {
+		sumContinued += sumContinued
+	}
+
+	fmt.Println(sumContinued)
 }
