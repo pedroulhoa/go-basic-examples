@@ -1,6 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
+	}
+
+	return fmt.Sprint(math.Sqrt(x))
+}
 
 func main() {
 	//for
@@ -12,11 +23,14 @@ func main() {
 
 	fmt.Println(sum)
 
-	// for continued
+	// for continued / For is Go's "while"
 	sumContinued := 1
 	for sumContinued < 1000 {
 		sumContinued += sumContinued
 	}
 
 	fmt.Println(sumContinued)
+
+	// If
+	fmt.Println(sqrt(2), sqrt(-4))
 }
