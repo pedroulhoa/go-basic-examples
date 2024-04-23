@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"runtime"
+	"time"
 )
 
 func sqrt(x float64) string {
@@ -61,4 +62,28 @@ func main() {
 		// plan9, windows...
 		fmt.Printf("%s.\n", os)
 	}
+
+	// switch no condition
+	t := time.Now()
+
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+
+	// defer
+	defer fmt.Println("world")
+	fmt.Println("Hello")
+
+	fmt.Println("counting")
+
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+
+	fmt.Println("done")
 }
