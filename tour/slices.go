@@ -51,4 +51,16 @@ func main() {
 	}
 
 	fmt.Println(ls)
+
+	// Slice defaults
+	sd := []int{2, 3, 5, 7, 11, 13}
+
+	sd = sd[0:4]
+	fmt.Println(sd)
+
+	sd = sd[:3] // O padrão é zero para o limite inferior
+	fmt.Println(sd)
+
+	sd = sd[1:] // comprimento do slice para o limite superior.
+	fmt.Println(sd)
 }
