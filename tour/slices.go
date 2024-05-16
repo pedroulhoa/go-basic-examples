@@ -63,4 +63,24 @@ func main() {
 
 	sd = sd[1:] // comprimento do slice para o limite superior.
 	fmt.Println(sd)
+
+	// Slice length and capacity
+	sl := []int{2, 3, 5, 7, 11, 13}
+	printSlice(sl)
+
+	// Slice the slice to give it zero length.
+	sl = sl[:0]
+	printSlice(sl)
+
+	// Extend its length.
+	sl = sl[:4]
+	printSlice(sl)
+
+	// Drop its first two values.
+	sl = sl[2:]
+	printSlice(sl)
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
