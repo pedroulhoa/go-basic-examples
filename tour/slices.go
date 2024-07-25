@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
@@ -86,8 +88,26 @@ func main() {
 	if sn == nil {
 		fmt.Println("nil!")
 	}
+
+	// slice with make
+	am := make([]int, 5)
+	printSliceMake("am", am)
+
+	bm := make([]int, 0, 5)
+	printSliceMake("bm", bm)
+
+	cm := bm[:2]
+	printSliceMake("cm", cm)
+
+	dm := bm[2:5]
+	printSliceMake("dm", dm)
 }
 
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
+
+func printSliceMake(s string, x []int) {
+	fmt.Printf("%s len=%d cap=%d %v\n",
+		s, len(x), cap(x), x)
 }
